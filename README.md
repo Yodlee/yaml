@@ -1,1 +1,1 @@
-# Please refer to the corresponding branches to downlaod the latest Open API Spec
+# Please refer to the corresponding branches to download the latest Open API Spec
