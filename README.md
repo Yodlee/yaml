@@ -1,1 +1,1 @@
-# Please refer to corressponding branchs of the yaml releases in the format MMMYYYY
+# Please refer to the corresponding branches to downlaod the latest Open API Spec
