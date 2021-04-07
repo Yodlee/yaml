@@ -4908,10 +4908,9 @@ definitions:
     type: "object"
     title: "Field"
     properties:
-      isValueProvided:
-        description: "Indicates that the answer to the security question already exists in the Yodlee system.Persuading the user to provide the answer to the security question again during the edit-credential flow can be avoided.<br><br><br><b>Endpoints</b>:<ul><li>GET providerAccounts?include=questions</li><li>GET providerAccounts/{providerAccountId}? include=questions</li></ul>"
-        readOnly: true
-        type: "boolean"
+      image:
+        description: "Image displayed at the endsite.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li></ul>"
+        type: "string"
       prefix:
         description: "The prefix string that has to be displayed before the field value.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>"
         readOnly: true
@@ -4921,18 +4920,10 @@ definitions:
         description: "The minimum length of the login form field.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>"
         readOnly: true
         type: "integer"
-      name:
-        description: "Name of the field.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>"
-        readOnly: true
-        type: "string"
       valueEditable:
         description: "Indicates whether the field is editable or not.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>"
         readOnly: true
         type: "string"
-      id:
-        format: "int64"
-        description: "Identifier for the field.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>"
-        type: "integer"
       isOptional:
         description: "Indicates if a field is an optional field or a mandatory field.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>"
         readOnly: true
@@ -4952,6 +4943,19 @@ definitions:
         - "checkbox"
         - "radio"
         - "image"
+      isValueProvided:
+        description: "Indicates that the answer to the security question already exists in the Yodlee system.Persuading the user to provide the answer to the security question again during the edit-credential flow can be avoided.<br><br><br><b>Endpoints</b>:<ul><li>GET providerAccounts?include=questions</li><li>GET providerAccounts/{providerAccountId}? include=questions</li></ul>"
+        readOnly: true
+        type: "boolean"
+      name:
+        description: "Name of the field.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>"
+        readOnly: true
+        type: "string"
+      id:
+        minLength: 1
+        description: "Identifier for the field.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>"
+        type: "string"
+        maxLength: 2147483647
       value:
         description: "Value expected from the user for the field. This will be blank and is expected to be filled and sent back when submitting the login or MFA information.<br><br><b>Endpoints</b>:<ul><li>GET providerAccounts/{providerAccountId}</li><li>GET providers/{providerId}</li></ul>"
         type: "string"
