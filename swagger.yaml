@@ -1060,8 +1060,8 @@ paths:
       description: "The delete provider account service is used to delete a provider account <br>from the Yodlee system. This service also deletes the accounts that are created in the <br>Yodlee system for that provider account. This service does not return a response. <br>The HTTP response code is 204 (Success with no content).<br>"
       operationId: "deleteProviderAccount"
       responses:
-        200:
-          description: "OK"
+        204:
+          description: "The Provider Account was successfully deleted"
         400:
           schema:
             $ref: "#/definitions/YodleeError"
