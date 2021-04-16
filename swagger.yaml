@@ -3478,9 +3478,26 @@ definitions:
           - "realEstate"
           - "otherAssets"
           - "otherLiabilities"
+      fromDate:
+        description: "Applicable only to EBILLS and STATEMENTS attributes of DOCUMENT dataset.<br><br><b>Endpoints</b>:<ul><li>POST providerAccounts</li><li>PUT providerAccounts</li></ul>"
+        readOnly: true
+        type: "string"
+      toFinYear:
+        description: "Applicable only to TAX attribute of DOCUMENT dataset.<br><br><b>Endpoints</b>:<ul><li>POST providerAccounts</li><li>PUT providerAccounts</li></ul>"
+        readOnly: true
+        type: "string"
+      fromFinYear:
+        description: "Applicable only to TAX attribute of DOCUMENT dataset.<br><br><b>Endpoints</b>:<ul><li>POST providerAccounts</li><li>PUT providerAccounts</li></ul>"
+        readOnly: true
+        type: "string"
       containerAttributes:
+        description: "Applicable only to TRANSACTIONS attributes of BASIC_AGG_DATA dataset.<br><br><b>Endpoints</b>:<ul><li>GET providers</li><li>GET providers/{providerId}</li><li>POST providerAccounts</li><li>PUT providerAccounts</li></ul>"
         readOnly: true
         $ref: "#/definitions/ContainerAttributes"
+      toDate:
+        description: "Applicable only to EBILLS and STATEMENTS attributes of DOCUMENT dataset.<br><br><b>Endpoints</b>:<ul><li>POST providerAccounts</li><li>PUT providerAccounts</li></ul>"
+        readOnly: true
+        type: "string"
       name:
         description: "Attributes that are supported for a dataset.<br><br><b>Endpoints</b>:<ul><li>GET providers</li><li>GET providers/{providerId}</li></ul>"
         type: "string"
@@ -8646,6 +8663,7 @@ definitions:
         - "PENDING"
         - "SCHEDULED"
         - "FAILED"
+        - "CLEARED"
   UserSession:
     type: "object"
     title: "UserSession"
@@ -8712,6 +8730,7 @@ definitions:
         - "PENDING"
         - "SCHEDULED"
         - "FAILED"
+        - "CLEARED"
   ProviderAccountResponse:
     type: "object"
     title: "ProviderAccountResponse"
@@ -9198,6 +9217,7 @@ definitions:
         - "PENDING"
         - "SCHEDULED"
         - "FAILED"
+        - "CLEARED"
   ConfigsPublicKey:
     type: "object"
     title: "ConfigsPublicKey"
