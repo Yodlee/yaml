@@ -3196,6 +3196,7 @@ definitions:
         - "CNY"
         - "VND"
         - "MYR"
+        - "CHF"
       locale:
         description: "The locale of the user. This locale will be considered for localization features like providing the provider information in the supported locale or providing category names in the transaction related services.<br><b>Applicable Values</b><br>"
         type: "string"
@@ -4236,6 +4237,7 @@ definitions:
         - "CNY"
         - "VND"
         - "MYR"
+        - "CHF"
       locale:
         description: "The locale of the user. This locale will be considered for localization features like providing the provider information in the supported locale or providing category names in the transaction related services.<br><b>Applicable Values</b><br>"
         type: "string"
@@ -5016,6 +5018,7 @@ definitions:
         - "CNY"
         - "VND"
         - "MYR"
+        - "CHF"
   CreateConfigsNotificationEvent:
     type: "object"
     title: "CreateConfigsNotificationEvent"
